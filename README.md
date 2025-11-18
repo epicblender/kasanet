@@ -1,2 +1,2 @@
 # teto
-teto.au
+welcome to teto kasanet located at teto.au
