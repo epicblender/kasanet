@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  font-weight: 300; /* light */
+  background: #fafafa;
+  color: #222;
+}
+
+header {
+  background: #e24;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background: #eee;
+}
+
+.small-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 15%;
+  height: auto;
+}
+
+.hover-image {
+  transition: transform 0.3s ease;
+}
+
+.hover-image:hover {
+  transform: scaleX(5);
+}
