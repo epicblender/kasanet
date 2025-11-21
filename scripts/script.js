@@ -14,7 +14,7 @@ const wrapper = document.querySelector('.wide-wrapper');
 window.addEventListener('scroll', () => {
   const animationOffset = window.innerHeight * 0.5;
   const topLimit = wrapper.offsetTop;
-  const bottomLimit = topLimit + wrapper.offsetHeight - window.innerHeight;
+  const bottomLimit = topLimit + wrapper.offsetHeight - (image.offsetHeight / 2 + window.innerHeight / 2);
   
   const scroll = window.scrollY;
 
@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
     image.style.opacity = '1';
   } else {
     image.style.position = 'absolute';
-    image.style.top = (wrapper.offsetHeight - window.innerHeight / 2) + 'px';
+    image.style.top = (wrapper.offsetHeight - image.offsetHeight / 2) + 'px';
     image.style.left = '50vw';
     image.style.opacity = '1';
   }
