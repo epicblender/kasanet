@@ -17,11 +17,10 @@ header {
   z-index: 1000;
 }
 
-main {
+section {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
-  position: relative;
 }
 
 h2 {
@@ -64,18 +63,18 @@ footer {
 }
 
 .wide-wrapper {
-  position: absolute;
+  top: 0;
+  left: 0;
+  position: relative;
   height: 300vh;
   width: 100%;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .wide-image {
-  position: absolute;
+  position: sticky;
   top: 50vh;
   left: 75vw;
   transform: translate(-50%, -50%);
