@@ -63,6 +63,24 @@ footer {
   height: 400vh;
 }
 
+.wide-wrapper {
+  position: absolute;
+  height: 400vh;
+  top: 50vh;
+}
+
+.wide-image {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url('./assets/img/fatass-teto.png');
+}
+
 .hero-bg {
   position: absolute;
   top: 0;
