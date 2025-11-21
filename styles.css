@@ -17,11 +17,10 @@ header {
   z-index: 1000;
 }
 
-main {
+section {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
-  position: relative;
 }
 
 h2 {
@@ -38,7 +37,7 @@ footer {
 .small-image {
   display: block;
   margin: 0 auto;
-  max-width: 15%;
+  max-width: 5%;
   height: auto;
 }
 
@@ -63,13 +62,35 @@ footer {
   height: 400vh;
 }
 
+.wide-wrapper {
+  top: 0;
+  left: 0;
+  position: relative;
+  height: 300vh;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wide-image {
+  position: sticky;
+  top: 50vh;
+  left: 75vw;
+  transform: translate(-50%, -50%);
+  transition: left 0.7s ease, opacity 0.5s ease;
+  opacity: 0;
+  max-width: 800px;
+  max-height: 100vh;
+}
+
 .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/img/fatass-teto.png');
+  background-image: url('./assets/img/teto-plush-side.png');
   background-size: cover;
   background-position: center;
   background-color: rgba(67, 0, 0, 0.1);
