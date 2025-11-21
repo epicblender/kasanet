@@ -11,20 +11,19 @@ const image = document.querySelector('.wide-image');
 const wrapper = document.querySelector('.wide-wrapper');
 
 window.addEventListener('scroll', () => {
-  const wrapperStart = wrapper.getBoundingClientRect().top + window.scrollY;
-
-  const topLimit = wrapperStart;
-  const bottomLimit = wrapperStart + window.innerHeight;
+  const topLimit = wrapper.offsetTop;
+  const bottomLimit = topLimit + wrapper.offsetHeight - window.innerHeight;
+  
   const scroll = window.scrollY;
 
-  if (scroll >= topLimit && scroll <= bottomLimit) {
-    image.style.position = 'fixed';
-    image.style.top = '0';
-  } else if (scroll < topLimit) {
+  if (scroll < topLimit) {
     image.style.position = 'absolute';
-    image.style.top = '0';
+    image.style.top = '50vh';
+  } else if (scroll > bottomLimit) {
+    image.style.position = 'absolute';
+    image.style.top = (wrapper.offsetHeight - window.innerHeight / 2) + 'px';
   } else {
-    image.style.position = 'absolute';
-    image.style.top = (wrapper.offsetHeight - image.offsetHeight) + 'px';
+    image.style.position = 'fixed';
+    image.style.top = '50vh';
   }
 });
