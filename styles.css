@@ -65,19 +65,22 @@ footer {
 
 .wide-wrapper {
   position: absolute;
-  height: 200vh;
+  height: 300vh;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .wide-image {
   position: absolute;
   top: 50vh;
-  left: 50vw;
+  left: 75vw;
   transform: translate(-50%, -50%);
+  transition: left 0.7s ease, opacity 0.5s ease;
+  opacity: 0;
   max-width: 800px;
   max-height: 100vh;
 }
@@ -88,7 +91,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/img/fatass-teto.png');
+  background-image: url('./assets/img/teto-plush-side.png');
   background-size: cover;
   background-position: center;
   background-color: rgba(67, 0, 0, 0.1);
