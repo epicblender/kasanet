@@ -8,7 +8,7 @@ img.addEventListener('mouseenter', () => {
 });
 
 const image = document.querySelector('.wide-image');
-const wrapper = document.querySelector('.wide-wrapper');
+const wrapper = document.querySelector('#wide-wrapper');
 
 const initialHeight = image.offsetHeight;
 const initialWidth = image.offsetWidth;
@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
     image.style.opacity = '0';
     image.style.maxHeight = initialHeight + 'px';
     image.width = initialWidth;
-  }else if (scroll < bottomLimit) {
+  } else if (scroll < bottomLimit) {
     image.style.position = 'fixed';
     image.style.top = '50vh';
     image.style.left = '50vw';
@@ -58,3 +58,14 @@ window.addEventListener('scroll', () => {
     image.width = initialWidth;
   }
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // optional: fade in only once
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));

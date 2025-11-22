@@ -34,6 +34,23 @@ footer {
   background: #eee;
 }
 
+.title {
+  font-size: 100px;
+  font-weight: 900;
+  color: rgb(255, 92, 92);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .small-image {
   display: block;
   margin: 0 auto;
@@ -62,14 +79,13 @@ footer {
   height: 400vh;
 }
 
-.wide-wrapper {
+#wide-wrapper {
   top: 0;
   left: 0;
   position: relative;
   height: 300vh;
   width: 100%;
   z-index: 1;
-  pointer-events: none;
   overflow: hidden;
 }
 
@@ -82,6 +98,7 @@ footer {
   opacity: 0;
   max-width: 800px;
   max-height: 100vh;
+  pointer-events: none;
 }
 
 .hero-bg {
@@ -90,7 +107,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/img/teto-plush-side.png');
+  background-image: url('/assets/img/teto-plush-side.png');
   background-size: cover;
   background-position: center;
   background-color: rgba(67, 0, 0, 0.1);
