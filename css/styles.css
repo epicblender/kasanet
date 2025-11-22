@@ -101,7 +101,8 @@ footer {
 
 #preload-subtitle {
   position: absolute;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
   top: 40px;
   opacity: 0;
   width: 100%;
