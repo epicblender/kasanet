@@ -167,7 +167,8 @@ svg {
   transform: translate(-50%, -50%);
   transition: left 0.7s ease, opacity 0.5s ease;
   opacity: 0;
-  max-width: var(--page-width);
+  max-width: min(var(--page-width), 100vw);
   max-height: 100vh;
+  width: var(--page-width);
   pointer-events: none;
 }
